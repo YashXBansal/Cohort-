@@ -1,4 +1,4 @@
-# Welcome to My Personal Repository - Cohort R 2
+# Welcome to My Personal Repository - Cohort 2
 
 ## Introduction
 Welcome to my personal repository within Cohort 2! This repository is where I organize my projects, notes, and resources related to our cohort's activities and learning journey.
@@ -18,6 +18,6 @@ You can reach me via email at yashbansal414@gmail.com or connect with me on:
 - X-handler: (https://twitter.com/Yash261204)
 - LinkedIn: (https://www.linkedin.com/in/yash-bansal-768402273/)
 
-Let's continue to learn and grow together within Cohort R 2!
+Let's continue to learn and grow together within Cohort 2!
 
 **Happy coding and learning!**
