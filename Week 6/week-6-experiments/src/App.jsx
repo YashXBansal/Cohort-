@@ -1,31 +1,28 @@
-import { useState } from "react";
+import React from "react";
 
 function App() {
   return (
-    <>
-    <HeaderWithButton></HeaderWithButton>
-      <Header title="The person above is a nigga"></Header>
-      <Header title="The person above is a nigga"></Header>
-      <Header title="The person above is a nigga"></Header>
-    </>
-  );
-}
-
-function HeaderWithButton() {
-  const [title, setTitle] = useState("Umar");
-
-  function random() {
-    setTitle("My name is " + Math.random());
-  }
-  return (
-    <div>
-      <button onClick={random}>Click me to change the title</button>
-      <Header title={title}></Header>
+    <div style={{display: "inline-flex"}}>
+      <CardWrapper> hi there </CardWrapper>
+      <CardWrapper> hi there </CardWrapper>
+      <CardWrapper> hi there </CardWrapper>
     </div>
   );
-}
-function Header({ title }) {
-  return <div>{title}</div>;
+}    
+
+function CardWrapper({ children }) {
+  return (
+    <div
+      style={{
+        border: "2px solid black",
+        padding: 20,
+        margin: 12,
+        justifyContent: "center",
+      }}
+    >
+      {children}
+    </div>
+  );
 }
 
 export default App;
