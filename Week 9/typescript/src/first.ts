@@ -1,14 +1,17 @@
-interface user{
+interface User{
     name: string,
     lastname: string,
-    email: string,
     age: number,
 }
-
-const user ={
+function filteredUsers(users: User[]){
+    return users.filter(x => x.age >=18);
+}
+console.log(filteredUsers([{
     name: "Yash",
     lastname: "Bansal",
-    email: "bansal@gmail.com",
     age: 18
-}
-console.log(user.name)
+}, {
+    name: "Sniper",
+    lastname: "Bansal",
+    age: 16 
+}]))
