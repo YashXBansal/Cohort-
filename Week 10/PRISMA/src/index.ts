@@ -20,4 +20,4 @@ async function insertUser(email: string, password: string, firstName: string, la
     console.log(res); 
 }
 
-insertUser("mrX@gmail.com", "PunjabI", "Lassi", "singh", "+91");
+insertUser("try@gmail.com", "try", "try", "try", "+91");
