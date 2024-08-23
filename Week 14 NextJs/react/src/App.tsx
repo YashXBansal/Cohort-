@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 type User = {
   name: string;
@@ -29,7 +29,7 @@ function App() {
   }, []); // Empty dependency array ensures this useEffect runs only once
 
   return (
-    <div className="text-red-700 text-center pt-10 self-center text-fuchsia-700 justify-center">
+    <div className="text-center pt-10 self-center text-fuchsia-700 justify-center">
       <h1>User Information</h1>
       {userInfo ? (
         <div>
