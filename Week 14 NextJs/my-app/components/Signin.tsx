@@ -1,20 +1,25 @@
-"use client"
+"use client";
 import { FC } from "react";
 import { useState } from "react";
 import { FaGoogle, FaGithub, FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
 
 const SignIn: FC = () => {
-    const [passwordVisible, setPasswordVisible] = useState(false);
-    const togglePasswordVisibility = () => {
-        setPasswordVisible(!passwordVisible);
-      };
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+  function Handler() {
+    console.log("Hi there");
+  }
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-700 via-pink-600 to-red-600">
       <div className="bg-gray-900 p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-3xl font-bold text-white text-center">Sign In</h2>
-        <p className="text-gray-400 text-center mb-8">Welcome back! Please sign in to your account.</p>
-        
+        <p className="text-gray-400 text-center mb-8">
+          Welcome back! Please sign in to your account.
+        </p>
+
         <form className="space-y-4">
           <input
             type="email"
@@ -39,6 +44,7 @@ const SignIn: FC = () => {
             </div>
           </div>
           <button
+            onClick={Handler}
             type="submit"
             className="w-full p-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
           >
