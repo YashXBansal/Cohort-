@@ -1,4 +1,6 @@
 import CredentialsProvider  from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
+
 export const NEXT_AUTH = {
     providers: [
         CredentialsProvider({
@@ -27,6 +29,10 @@ export const NEXT_AUTH = {
                     email: "bansal@gmail.com"
                 };
             },
+        }),
+        GoogleProvider({
+            clientId: process.env.GOOGLE_CLIENT_ID || "",
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET || ""
         })
     ],
     secret: process.env.NEXTAUTH_SECRET,
@@ -37,13 +43,15 @@ export const NEXT_AUTH = {
         //     }
         //     return true;
         // }
-        // jwt: ({token, user}) => {
+        // jwt: ({token, user} : any) => {
         //     token.userId = token.sub;
         //     return token;
         // },
         session: ({session, token, user}: any) => {
+            console.log(session)
             if(session && session.user){
-                session.user.id = token.userId; // token.sub
+                session.user.id = token.sub; // token.sub
+                session.user.image = token.picture; 
             }
             return session;
         }
