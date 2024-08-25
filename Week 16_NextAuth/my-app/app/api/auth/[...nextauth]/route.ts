@@ -32,7 +32,15 @@ const handler = NextAuth({
             },
         })
     ],
-    secret: process.env.NEXTAUTH_SECRET
+    secret: process.env.NEXTAUTH_SECRET,
+    callbacks: {
+        signIn: ({user}) => {
+            if(user.email == "randomperson@gmail.com"){
+                return false
+            }
+            return true;
+        }
+    }
 })
 
 export const GET = handler;
